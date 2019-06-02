@@ -30,6 +30,9 @@ steps:
       echo '*** Using OpenJDK 11'
       sudo update-java-alternatives -l
       sudo update-java-alternatives -s /usr/lib/jvm/zulu-11-azure-amd64
+      ls -lta /usr/lib/jvm/zulu-11-azure-amd64
+
+
       echo JAVA_HOME="$JAVA_HOME"
       java -version
     else
