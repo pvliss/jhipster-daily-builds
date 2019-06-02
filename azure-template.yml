@@ -28,9 +28,8 @@ steps:
 - script: |
     if [[ $JHI_JDK = '11' ]]; then
       echo '*** Using OpenJDK 11'
-      sudo apt-get -y install zulu-11-azure-jdk=\*
       sudo update-java-alternatives -l
-      sudo update-java-alternatives -s zulu-11-azure-amd64
+      sudo update-java-alternatives -s /usr/lib/jvm/zulu-11-azure-amd64
       echo JAVA_HOME="$JAVA_HOME"
       java -version
     else
